@@ -60,7 +60,7 @@ git submodule update
 Once you've done the previous step, just copy everything in this repository to the home directory. Dependencies are:
 
 ```sh
-sudo apt install kitty fish nvim i3 rofi polybar xsel compton gtk3-nocsd flameshot
+sudo apt install kitty fish nvim i3 feh rofi polybar xsel compton gtk3-nocsd flameshot
 ```
 
 Additional dependencies:
