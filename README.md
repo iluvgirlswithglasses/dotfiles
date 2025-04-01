@@ -47,14 +47,6 @@ You may clone this repository using:
 git clone --depth 1 https://github.com/iluvgirlswithglasses/dotfiles
 ```
 
-To also clone my fonts (and neovim config), use the following commands. If NerdFont is already installed on your machine, however, there's no need to execute them.
-
-```sh
-cd dotfiles
-git submodule init
-git submodule update
-```
-
 ## Step 2: Copy Files
 
 Once you've done the previous step, just copy everything in this repository to the home directory. Dependencies are:
