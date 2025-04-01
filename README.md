@@ -66,6 +66,7 @@ sudo apt install kitty fish nvim i3 feh rofi polybar xsel compton gtk3-nocsd fla
 Additional dependencies:
 
 - [macchina](https://github.com/Macchina-CLI/macchina), whose executable file is also included here in `./.local/bin`
+- NerdFonts. If you use Debian, I suggest you install them via [this repository](https://github.com/ryanoasis/nerd-fonts)
 
 ## Step 3: Further customization
 
