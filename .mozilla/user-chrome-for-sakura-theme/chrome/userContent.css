@@ -1,0 +1,75 @@
+
+/* about:blank should be black */
+@-moz-document url(about:blank) {
+    html, body { 
+        background: #121115; 
+    }
+}
+
+/* custom about:privatebrowsing cuz it's too ugly */
+@-moz-document url(about:privatebrowsing) {
+    html, body { 
+        background: #121115; 
+    }
+
+    @font-face {
+        font-family: itc;
+        src: url("font/ITCEDSCR.TTF");
+    }
+    
+    /* config */
+    :root {
+        /* background size */
+        --bg-size: 320px;
+        /* message size */
+        --ms-size: 3.25rem;
+    }
+
+    /* turn of all texts */
+    .promo, .info {
+        display: none !important;
+    }
+
+    /* Changes the home screen color */
+    html.private {
+        --in-content-page-background: #121115 !important;
+    }
+
+    /* Centers logo and wordmark */
+    .logo-and-wordmark {
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* hide firefox wordmark */
+    html.private .wordmark {
+        display: none !important;
+    }
+
+    /* Changes the logo on the private browsing home screen */
+    html.private .logo {
+        background-image: url("img/private.png") !important;
+        background-size: var(--bg-size) !important;
+        height: var(--bg-size) !important;
+        width: var(--bg-size) !important;
+    }
+
+    /* the search bar (which I won't use anyway lol) */
+    #search-handoff-button {
+        display: none !important;
+    }
+
+    /* the message */
+    .search-inner-wrapper::after {
+        display: block;
+        width: 100%;
+
+        content: "Wanna go somewhere without anyone knowing, huh ?";
+        font-family: itc;
+        text-align: center;
+        font-size: var(--ms-size) !important;
+    }
+}
