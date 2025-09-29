@@ -10,4 +10,5 @@ xrandr --output HDMI-1 --pos 1920x0 --rotate right
 
 ### add environment variables
 export QT_QPA_PLATFORMTHEME=kde # options: kde, qt5ct, gtk
+export GLFW_IM_MODULE=ibus
 
