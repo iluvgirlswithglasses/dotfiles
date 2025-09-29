@@ -5,12 +5,9 @@
 
 set -x PATH $PATH /usr/sbin ~/.local/bin
 
-
-######################################################################
-#### ---------------------- greeting scene ---------------------- ####
-######################################################################
-
-macchina-linux-x86_64
+abbr --add cloneme git clone ssh+git://git@github.com/iluvgirlswithglasses/
+abbr --add setntp timedatectl set-ntp
+abbr --add settime sudo timedatectl set-time
 
 
 #######################################################################
@@ -29,19 +26,8 @@ alias clip="xsel --clipboard"
 #### ------------------ quick directory actions ------------------ ####
 #######################################################################
 
-function qpush
-    git add .
-    git commit -m $argv
-    git push
-end
-
-function pullsh
-    git pull
-    qpush $argv
-end
-
 function yd
-    pwd | xsel --clipboard;
+    pwd | tr -d '\n' | xsel --clipboard;
 end
 
 
@@ -50,34 +36,34 @@ end
 #######################################################################
 
 function mpvp
-	# mpv plays a file
-	mpv "`ls | sed -n $1p`";
+    # mpv plays a file
+    mpv "`ls | sed -n $1p`";
 end
 
 function mpvd
-	# mpv plays everything in directory
-	ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|>' > ".mpv-pl-list";
-	mpv -playlist=".mpv-pl-list";
-	rm ".mpv-pl-list";
+    # mpv plays everything in directory
+    ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|>' > ".mpv-pl-list";
+    mpv -playlist=".mpv-pl-list";
+    rm ".mpv-pl-list";
 end
 
 function mpva
-	# mpv plays audio with no display
-	mpv "`ls | sed -n $1p`" --no-audio-display;
+    # mpv plays audio with no display
+    mpv "`ls | sed -n $1p`" --no-audio-display;
 end
 
 function mpvl
-	# mpv plays everything in directory with no display
-	ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
-	mpv -playlist=".mpv-pl-list" --no-audio-display;
-	rm ".mpv-pl-list";
+    # mpv plays everything in directory with no display
+    ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
+    mpv -playlist=".mpv-pl-list" --no-audio-display;
+    rm ".mpv-pl-list";
 end
 
 function mpvr
-	# recursively plays everything in directory with no display
-	find . -print | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
-	mpv -playlist=".mpv-pl-list" --no-audio-display;
-	rm ".mpv-pl-list";
+    # recursively plays everything in directory with no display
+    find . -print | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
+    mpv -playlist=".mpv-pl-list" --no-audio-display;
+    rm ".mpv-pl-list";
 end
 
 
@@ -100,6 +86,7 @@ end
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_greeting
+    macchina-linux-x86_64
 end
 
 fish_config prompt choose informative
