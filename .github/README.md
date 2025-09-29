@@ -3,23 +3,25 @@
 
 This is my very simple i3wm dotfiles, focusing on the arrangement of high-contrast colors---which I believe aren't appreciated enough. Vibrant scarlet set against a deep, cold dark-blue background... I just love it so much.
 
-By the way, this dotfiles is hard coded for dual monitors, so please edit `./profile` (line 8-9) and `./.config/i3/config` (line 126-135) before applying this dotfiles on other systems.
+By the way, this dotfiles is hard coded for dual monitors, so please edit `./profile` (line 8-9) and `./.config/i3/config` (search for line with `workspace 1 output DP-0`) before applying this dotfiles on other systems.
 
 # Showcase
-
-![Polybar and Desktop](./showcase/0.png)
 
 ![Rofi](./showcase/1.png)
 
 ![Kitty, nvim, and macchina](./showcase/2.png)
 
-![Firefox and Dolphin](./showcase/3.png)
+<details>
+    <summary>Show more</summary>
 
-![Firefox extensions](./showcase/4.png)
+    ![Firefox and Dolphin](./showcase/3.png)
 
-![Dual Monitors Setup](./showcase/5.png)
+    ![Firefox extensions](./showcase/4.png)
 
-![POV: Me 2 years ago](./showcase/6.png)
+    ![Dual Monitors Setup](./showcase/5.png)
+
+    ![POV: Me 2 years ago](./showcase/6.png)
+</details>
 
 # Color Palette
 
@@ -52,7 +54,7 @@ git clone --depth 1 https://github.com/iluvgirlswithglasses/dotfiles
 Once you've done the previous step, just copy everything in this repository to the home directory. Dependencies are:
 
 ```sh
-sudo apt install kitty fish nvim i3 feh rofi polybar xsel compton gtk3-nocsd flameshot
+sudo apt install kitty fish nvim i3 feh rofi polybar xsel compton gtk3-nocsd flameshot pipewire
 ```
 
 Additional dependencies:
@@ -80,5 +82,5 @@ My nvim configuration is in [this repository](https://github.com/iluvgirlswithgl
 
 The tool I used for printing two lovey-dovey cats is [here](https://github.com/iluvgirlswithglasses/terminal-tools).
 
-I am planning to make another scarlet-themed rice for Hyprland. You can watch its progress [here](https://github.com/iluvgirlswithglasses/dotfiles-hyprland).
+Also, here's my [hyprland dots](https://github.com/iluvgirlswithglasses/dots-hyprland)!
 
