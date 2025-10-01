@@ -1,4 +1,9 @@
 
+<details>
+    <summary>Please checkout branch `cute-light` for a 1000% more adorable rice!!</summary>
+    <img width="1920" height="2160" alt="cinnamoroll" src="https://github.com/user-attachments/assets/54f6d9b0-08d8-40c7-a58f-ff9f087ef74a" />
+</details>
+
 # My dotfiles
 
 This is my very simple i3wm dotfiles, focusing on the arrangement of high-contrast colors---which I believe aren't appreciated enough. Vibrant scarlet set against a deep, cold dark-blue background... I just love it so much.
@@ -54,7 +59,7 @@ git clone --depth 1 https://github.com/iluvgirlswithglasses/dotfiles
 Once you've done the previous step, just copy everything in this repository to the home directory. Dependencies are:
 
 ```sh
-sudo apt install kitty fish nvim i3 feh rofi polybar xsel compton gtk3-nocsd flameshot pipewire
+sudo apt install kitty fish i3 feh rofi polybar xsel compton picom gtk3-nocsd flameshot pipewire
 ```
 
 Additional dependencies:
