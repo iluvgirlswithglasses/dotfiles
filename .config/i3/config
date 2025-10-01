@@ -48,12 +48,10 @@ tiling_drag modifier titlebar
 # launchers
 bindsym $mod+Return exec kitty
 bindsym $mod+w exec firefox
-bindsym $mod+e exec dolphin
-bindsym $mod+Shift+w exec ~/r/appimg/waterfox/waterfox
+bindsym $mod+e exec thunar
 
-bindsym Print exec spectacle
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
-bindsym Shift+Print exec --no-startup-id flameshot full
+bindsym Print exec --no-startup-id flameshot full --path ~/tmp.png
 
 # kill focused window
 bindsym $mod+q kill
@@ -127,16 +125,6 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-workspace 1 output DP-0
-workspace 2 output DP-0
-workspace 3 output DP-0
-workspace 4 output DP-0
-workspace 5 output DP-0
-workspace 6 output DP-0
-workspace 7 output DP-0
-workspace 8 output HDMI-1
-workspace 9 output HDMI-1
-workspace 10 output HDMI-1
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
@@ -189,9 +177,9 @@ bar {
 # ------------------------------------------------------------------ #
 #                              services                              #
 # ------------------------------------------------------------------ #
-exec polybar
-exec_always feh --bg-scale ~/.wallpapers/sakura--rchannel-boosted--1920-1080.png --bg-scale ~/.wallpapers/rose--colden--1080-1920.png
-exec_always compton -f -I 0.080 -O 0.080 --vsync opengl
+exec polybar --reload
+exec_always feh --bg-scale ~/.wallpapers/cinn.png
+exec_always picom -f -I 0.080 -O 0.080 --backend glx
 
 
 # ------------------------------------------------------------------ #

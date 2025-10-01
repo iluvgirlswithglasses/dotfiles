@@ -11,11 +11,11 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 12";
-    background:                  #050e14;
+    font:                        "SpaceMono Nerd Font 12";
+    background:                  #DFE7F2;
     background-alt:              #282A2E80;
-    foreground:                  #C5C8C6;
-    selected:                    #F07489;
+    foreground:                  #545F6E;
+    selected:                    #B3C4E2;
     active:                      #6E77FF;
     urgent:                      #8E3596;
 }
@@ -59,10 +59,10 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     80px 60px;
+    padding:                     80px 80px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/themes/ib-black-coffin--high-contrast.jpg", width);
-    text-color:                  @foreground;
+    background-image:            url("~/.config/rofi/themes/glasses.png", width);
+    text-color:                  @background;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
 }
