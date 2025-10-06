@@ -1,11 +1,17 @@
 
 # My dotfiles
 
-My half-baked attempt at cuteness. I may retry with hyprland or awesomewm someday...
+My half-baked attempt at cuteness. I may retry with awesomewm someday...
 
 # Showcase
 
 <img width="1920" height="2160" alt="cinnamoroll" src="https://github.com/user-attachments/assets/54f6d9b0-08d8-40c7-a58f-ff9f087ef74a" />
+
+TODOs:
+1. Make a GTK theme
+2. Make a better bar with awesomewm (i3 autokills empty workspaces, which make the "butterfly" workspace indicator impractical)
+3. This browser is boring, make a better browser rice (may just adapt [shyfox](https://github.com/iluvgirlswithglasses/shyfox))
+4. Make a menu for calendar and notifications and other stuffs (also with awesomewm)
 
 # Installation
 
