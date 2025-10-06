@@ -179,7 +179,7 @@ bar {
 # ------------------------------------------------------------------ #
 exec polybar --reload
 exec_always feh --bg-scale ~/.wallpapers/cinn.png
-exec_always picom -f -I 0.080 -O 0.080 --backend glx
+exec_always picom -f -I 0.080 -O 0.080 --detect-client-opacity --backend glx --config ~/.config/picom/picom.conf
 
 
 # ------------------------------------------------------------------ #
