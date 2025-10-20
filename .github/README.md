@@ -59,7 +59,7 @@ git clone --depth 1 https://github.com/iluvgirlswithglasses/dotfiles
 Once you've done the previous step, just copy everything in this repository to the home directory. Dependencies are:
 
 ```sh
-sudo apt install kitty fish i3 feh rofi polybar xsel compton picom gtk3-nocsd flameshot pipewire
+sudo apt install kitty fish i3 feh rofi polybar xsel picom gtk3-nocsd flameshot pipewire playerctl
 ```
 
 Additional dependencies:
