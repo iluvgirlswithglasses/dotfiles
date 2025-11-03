@@ -23,47 +23,18 @@ alias clip="xsel --clipboard"
 
 
 #######################################################################
-#### ------------------ quick directory actions ------------------ ####
+#### ----------------------- quick actions ----------------------- ####
 #######################################################################
 
 function yd
     pwd | tr -d '\n' | xsel --clipboard;
 end
 
-
-#######################################################################
-#### ------------------------ mpv aliases ------------------------ ####
-#######################################################################
-
-function mpvp
-    # mpv plays a file
-    mpv "`ls | sed -n $1p`";
-end
-
-function mpvd
-    # mpv plays everything in directory
-    ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|>' > ".mpv-pl-list";
-    mpv -playlist=".mpv-pl-list";
-    rm ".mpv-pl-list";
-end
-
-function mpva
-    # mpv plays audio with no display
-    mpv "`ls | sed -n $1p`" --no-audio-display;
-end
-
-function mpvl
-    # mpv plays everything in directory with no display
-    ls | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
-    mpv -playlist=".mpv-pl-list" --no-audio-display;
-    rm ".mpv-pl-list";
-end
-
-function mpvr
-    # recursively plays everything in directory with no display
-    find . -print | egrep '\.flac$|\.wav$|\.ogg$|\.mka$|\.webm$|\.m4a$|\.mp3$|\.mkv$|\.mp4$' > ".mpv-pl-list";
-    mpv -playlist=".mpv-pl-list" --no-audio-display;
-    rm ".mpv-pl-list";
+function rundisown
+    echo $argv[1..]
+    $argv[1..] 2> /dev/null &
+    set PID (jobs --last --pid)
+    disown $PID
 end
 
 
